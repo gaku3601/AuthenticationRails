@@ -5,4 +5,6 @@ RUN apt-get update && apt-get install -y build-essential libpq-dev postgresql-cl
 RUN gem install rails
 
 WORKDIR /app
+
+ADD ./app /app
 CMD sleep infinity

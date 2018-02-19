@@ -7,3 +7,9 @@ services:
             dockerfile: Dockerfile
         ports:
             - 80:3000
+        links:
+            - db
+        volumes:
+            - ../app:/app
+    db:
+        image: gaku3601/ja-postgresql:9.6.5
