@@ -11,5 +11,8 @@ services:
             - db
         volumes:
             - ../app:/app
+        environment:
+            - GITHUB_CLIENT_ID=${GITHUB_CLIENT_ID}
+            - GITHUB_CLIENT_SECRET=${GITHUB_CLIENT_SECRET}
     db:
         image: gaku3601/ja-postgresql:9.6.5
